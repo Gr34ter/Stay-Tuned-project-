@@ -109,13 +109,13 @@ footer{
     margin-top: 30px;
     padding: 10px;
 }
-@media all and (max-width:1000px){
+/* @media all and (max-width:1500px){
     .menu-flex li{
         flex: 1 1 50%;
     }
-}
+} */
 
-@media all and (max-width:600px){
+@media all and (max-width:1000px){
     .menu-flex li{
         flex-basis:100%;
     }
