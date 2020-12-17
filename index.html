@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <meta charset="UTF=8">
+  <title> Menu Flex</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ea6b6e49d1.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+      
+    <header class="logo">
+      <h1>STAY TUNED!</h1>
+    </header>
+    
+      <nav class="menu-flex">
+        
+          <a href="#" class="toggle-nav"><i class="fas fa-bars"></i></a>
+       
+
+        <ul>
+          <li><a href="#">List item 1</a></li>
+          <li><a href="#">List item 2</a></li>
+          <li><a href="#">List item 3</a></li>
+          <li><a href="#">List item 4</a></li>
+          <li><a href="#">List item 5</a></li>
+          <li><a href="#">List item 6</a></li>
+          <li class="social"><a href="#"><i class="fab fa-github-square fa-lg"></i></a></li>
+          <li class="social"><a href="#"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+          <li class="social"><a href=#><i class="fab fa-instagram-square fa-lg"></i></a></li>
+          <li class="social"><a href="#"><i class="fab fa-twitter-square fa-lg"></i></a></li>
+        </ul>
+      </nav>
+
+      <section class="hero">
+        <img src="https://picsum.photos/1000/600">
+      </section>
+
+      <section class="details">
+        <p>Na górze jest obrazek który generuje się automatycznie po odświeżeniu strony</p>
+        <br>
+        <p>Całkiem spoko patent... <b>STAY TUNED!</b></p>
+      </section>
+
+      <section class="sign-up-form">
+        <form action="" class="sign-me-up">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your e-mail adress">
+          <input type="submit" value="Stay Tuned with us!">
+        </form>  
+      </section>
+
+      <footer>
+        <p>&copy; All rights reserved, Stay Tuned!</p>
+      </footer>
+    </div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+
+      $(function() {
+        $('.wrapper .toggle-nav').on('click',function() {
+          $('.menu-flex ul').toggleClass('open');
+          // $('.menu-flex ul').slideToggle();
+        }); 
+      });
+        
+    </script>
+  </body>
+</html>

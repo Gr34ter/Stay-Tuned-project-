@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg-color: rgba(255, 255, 255, 0.1);
+    --main-txt-color: #333;
+    --container-width: 90%;
+    --header-bg-color: #333;
+    --header-txt-color: #fff;
+}
+body{
+    font-family: 'Inconsolata', monospace;
+    /* background-color: aquamarine; */
+    background-image: linear-gradient(280deg, #66ccff , #005580);
+}
+
+.wrapper {
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 0;
+
+}
+.wrapper .toggle-nav{
+    display: none;
+}
+.menu-flex{
+    width:100%;
+}
+.menu-flex a {
+    color:white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 15px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--main-bg-color);
+    height: 100%;
+}
+
+.menu-flex a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.menu-flex ul{
+    list-style-type: none;
+    border: 2px solid white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-flex li{
+    flex:3;
+}
+.menu-flex .social{
+    flex:1;
+}
+
+.hero{
+    padding: 20px; 
+    text-align: center;
+    background-color: var(--main-bg-color);
+    margin-top: 20px;
+}
+.hero img{
+    width: 100%;
+}
+.logo h1{
+    color: white;
+    letter-spacing: 5px;
+}
+.logo{
+    padding: 10px;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.details{
+    width: 100%;
+    background-color: var(--main-bg-color);
+    color: white;
+    line-height: 15px;
+    text-align: center;
+    padding: 10px;
+}
+.sign-me-up{
+    text-align:center;
+    color: white;
+    background-color: var(--main-bg-color);
+    padding: 20px;
+    margin-top: 20px;
+}
+.sign-me-up input{
+    padding:5px;
+    border:none;
+}
+footer{
+    color:white;
+    text-align: center;
+    background-color: var(--main-bg-color);
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 10px;
+}
+@media all and (max-width:1000px){
+    .menu-flex li{
+        flex: 1 1 50%;
+    }
+}
+
+@media all and (max-width:600px){
+    .menu-flex li{
+        flex-basis:100%;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    /*below selects flex items inside wrapper*/
+    .wrapper > *{
+        order:55555;
+    }
+    .menu-flex{
+        order:1;
+    }
+    .wrapper .toggle-nav{
+        display: block;
+    }
+    .menu-flex ul{
+        display:none;
+    }
+    .menu-flex ul.open{
+        display: flex;
+        border: none;
+    }
+}
+
+
+
